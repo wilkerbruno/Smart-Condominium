@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastr_unit.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Condominium Unit Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Smart Condominium</h1>
+        <span id="menu-toggle" class="menu-toggle">
+            
+        </span>
+    </header>
+
+    <input type ="checkbox" id="chec">
+        <label class="menu" for="chec">
+            <img src ="../img/menu.png"/>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+                <li><a  class="amenu" href="inicio.html">Painel</a></li>
+                <li><a class="amenu" href="units.html">Unidades</a></li>
+                <li><a class="amenu" href="residents.html">Moradores</a></li>
+                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+                <li><a class="amenu" href="reservas.html">Reservas</a></li>
+                <li><a class="amenu"  href="administration.html">Administração</a></li>
+            </ul>
+        </nav>
+    
+    <h2>Fazer reservas</h2>
+    <main class="registro_unidades">
+        <form id="unit-registration-form">
+            <section>
+                <div class="unidade">
+                    <label for="unidade_veiculo">Unidade:</label>
+                    <input type="text" id="unidade_veiculo" name="unidade_veiculo" required>
+                </div>
+                <div class="form-group2">
+                    <label for="morador_aluguel">Morador:</label>
+                    <input type="text" id="morador_aluguel" name="morador_aluguel" required>
+                </div>
+                <div class="form-group2">
+                    <label for="espaco_aluguel">Espaço:</label>
+                    <select id="espaco_aluguel" name="espaco_aluguel" required>
+                        <option value=""></option>
+                            <option value="area_gurmert">Area Gurmert</option>
+                            <option value="salao_festa">Salão de Festa</option>
+                            <option value="piscina">Piscina</option>
+                    </select>
+                </div>
+                <div class="form-group2">
+                    <label for="qtd_mesas">Mesas:</label>
+                    <input type="number" id="qtd_mesas" name="qtd_mesas" required>
+                </div>
+            </section>
+           
+            <section>
+                <div class="unidade">
+                    <label for="qtd_cadeiras">Cadeiras:</label>
+                    <input type="number" id="qtd_cadeiras" name="qtd_cadeiras" required>
+                </div>
+                <div class="form-group">
+                    <label for="aluguel_escada">Escada:</label>
+                    <select id="aluguel_escada" name="aluguel_escada" required>
+                        <option value=""></option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="outros_alugueis">Outros:</label>
+                    <select id="outros_alugueis" name="outros_alugueis" required>
+                        <option value=""></option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                    </select>
+                </div>
+                <div class="unidade">
+                    <label for="total_aluguel">Total:</label>
+                    <input type="text" id="total_aluguel" name="total_aluguel" placeholder="Campo desabilitado" disabled="" required >
+                </div>
+                        
+                    
+                    
+                </div>
+            </section>
+            <button type="submit">Reservar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

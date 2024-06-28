@@ -1,0 +1,50 @@
+        body, html {
+            font-family: Arial, helvetica, sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #pagewrap {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 1em;
+        }
+
+        #header {
+            padding: 1em;
+            text-align: center;
+            background: #ff3333;
+            color: white;
+        }
+
+        #header,
+        #mainSection,
+        #footer {
+            height: 100% ;
+        }
+
+        #mainSection {
+            overflow: auto;
+            width: 100%;
+            padding: 1em;
+        }
+
+        footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1em;
+        }
+
+        .panel {
+            width: 100%;
+            padding: 2em 3em;
+            border: 1px solid #ddd;
+            background: #ebf1f3;
+            margin-bottom: 0.5em;
+            text-align: center;
+            display: inline-block;
+        }

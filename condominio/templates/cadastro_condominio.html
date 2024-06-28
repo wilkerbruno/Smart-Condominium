@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/cadastro_condominio.css">
+    <title>Condominium Management System - Cadastro de Condomínio</title>
+</head>
+<body>
+    <header>
+        <h1>Smart Condominium</h1>
+        <span id="menu-toggle" class="menu-toggle">
+            
+        </span>
+    </header>
+
+    <input type ="checkbox" id="chec">
+        <label class="menu" for="chec">
+            <img src ="../img/menu.png"/>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+                <li><a  class="amenu" href="inicio.html">Painel</a></li>
+                <li><a class="amenu" href="units.html">Unidades</a></li>
+                <li><a class="amenu" href="residents.html">Moradores</a></li>
+                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+                <li><a class="amenu" href="reservas.html">Reservas</a></li>
+                <li><a class="amenu"  href="administration.html">Administração</a></li>
+            </ul>
+        </nav>
+<main>
+
+<h2>Cadastro de Condomínio</h2>
+        <form id="cadastro-condominio-form">
+            <section>
+                
+                <div class="form-group">
+                    <label for="nome-condominio">Nome do Condomínio:</label>
+                    <input type="text" id="nome-condominio" name="nome-condominio" required>
+                </div>
+				<div class="form-group">
+                    <label for="cep-condominio">CEP:</label>
+                    <input type="text" id="cep-condominio" name="cep-condominio" required>
+                </div>
+				<div class="form-group">
+                    <label for="estado-condominio">Estado:</label>
+                    <input type="text" id="estado-condominio" name="estado-condominio" required>
+                </div>
+				 
+				
+				</section>
+            <section>
+			<div class="form-group">
+                    <label for="cidade-condominio">Cidade:</label>
+                    <input type="text" id="cidade-condominio" name="cidade-condominio" required>
+                </div>
+                <div class="form-group">
+                    <label for="endereco-condominio">Endereço:</label>
+                    <input type="text" id="endereco-condominio" name="endereco-condominio" required>
+                </div>
+				<div class="form-group">
+                    <label for="endereco-condominio">Numero:</label>
+                    <input type="text" id="numero-condominio" name="numero-condominio" required>
+                </div>
+     
+            
+                
+				</section>
+            <section>
+			<div class="form-group">
+                    <label for="telefone-condominio">Telefone:</label>
+                    <input type="tel" id="telefone-condominio" name="telefone-condominio" required>
+                </div>
+				<div class="form-group">
+                    <label for="telefone-condominio">Celular:</label>
+                    <input type="tel" id="celular-condominio" name="celular-condominio" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-condominio">Email:</label>
+                    <input type="email" id="email-condominio" name="email-condominio" required>
+                </div>
+				</section>
+            <section>
+                <div class="form-group">
+                    <label for="nome-sindico">Nome do Síndico:</label>
+                    <input type="text" id="nome-sindico" name="nome-sindico" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone-sindico">Telefone do Síndico:</label>
+                    <input type="tel" id="telefone-sindico" name="telefone-sindico" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-sindico">Email do Síndico:</label>
+                    <input type="email" id="email-sindico" name="email-sindico" required>
+                </div>
+            </section>
+            <div class="form-group-full">
+                <label for="regras-regulamentos">Observações:</label>
+                <textarea id="observacoes" name="observacoes" rows="5" required></textarea>
+            </div>
+            <button type="submit">Cadastrar Condomínio</button>
+        </form>
+    </main>
+	<footer>
+        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

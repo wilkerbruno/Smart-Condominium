@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastr_unit.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Condominium Unit Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Smart Condominium</h1>
+        <span id="menu-toggle" class="menu-toggle">
+            
+        </span>
+    </header>
+    <input type ="checkbox" id="chec">
+        <label class="menu" for="chec">
+            <img src ="../img/menu.png"/>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+                <li><a  class="amenu" href="inicio.html">Painel</a></li>
+                <li><a class="amenu" href="units.html">Unidades</a></li>
+                <li><a class="amenu" href="residents.html">Moradores</a></li>
+                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+                <li><a class="amenu" href="reservas.html">Reservas</a></li>
+                <li><a class="amenu"  href="administration.html">Administração</a></li>
+            </ul>
+        </nav>
+    
+    <h2>Registro de Moradores</h2>
+    <main class="registro_unidades">
+        <form id="unit-registration-form">
+            <section>
+                <div class="unidade">
+                    <label for="nome_funcionario">Nome:</label>
+                    <input type="text" id="nome_funcionario" name="nome_funcionario" required>
+                </div>
+                <div class="form-group2">
+                    <label for="cpf_funcionario">CPF:</label>
+                    <input type="text" id="cpf_funcionario" name="cpf_funcionario" required>
+                </div>
+                <div class="form-group2">
+                    <label for="Cargo_funcionario">Cargo:</label>
+                    <input type="tel" id="Cargo_funcionario" name="Cargo_funcionario" required>
+                </div>
+                <div class="form-group2">
+                    <label for="telefone_morador">Telefone:</label>
+                    <input type="email" id="telefone_morador" name="telefone_morador" required>
+                </div>
+            </section>
+           
+            <section>
+                <div class="form-group">
+                    <label for="email_funcionario">E-mail:</label>
+                    <input type="text" id="email_funcionario" name="email_funcionario" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario_trabalho">Horario de trabalho:</label>
+                    <select id="horario_trabalho" name="horario_trabalho" required>
+                        <option value=""></option>
+                            <option value="proprietario">Proprietario</option>
+                            <option value="inquilino">Inquilino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="salario_funcionario">Salario:</label>
+                    <input type="text" id="salario_funcionario" name="salario_funcionario" required>
+                </div>
+                        
+                    
+                    
+                </div>
+            </section>
+            <button type="submit">Cadastrar Morador</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

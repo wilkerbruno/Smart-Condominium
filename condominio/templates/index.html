@@ -1,0 +1,132 @@
+{% extends "template.html" %}
+
+{% block conteudo_body %}
+    
+    
+    <main>
+	
+		<div class="dashboard">
+    <div class="panel saldo-em-conta">
+        <h2>Saldo em Conta</h2>
+        <p id="saldo-value">R$ 10.000,00</p>
+    </div>
+    <div class="panel contas-a-pagar">
+        <h2>Contas a Pagar</h2>
+        <p id="contas-pagar-value">R$ 5.000,00</p>
+    </div>
+    <div class="panel contas-a-receber">
+        <h2>Contas a Receber</h2>
+        <p id="contas-receber-value">R$ 8.000,00</p>
+    </div>
+    <div class="panel inadimplencia">
+        <h2>Inadiplência</h2>
+        <p id="inadimplencia-value">R$ 2.000,00</p>
+    </div>
+</div>
+
+ <div class="chart-container">
+        <canvas id="consumoAguaChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="consumoGasChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="fluxoCaixaChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="receitasDespesasChart"></canvas>
+    </div>
+
+    <script>
+        // Dados de exemplo para os gráficos
+        var consumoAguaData = {
+            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+            datasets: [{
+                label: 'Consumo de Água',
+                data: [20, 25, 30, 28, 22],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var consumoGasData = {
+            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+            datasets: [{
+                label: 'Consumo de Gás',
+                data: [15, 18, 20, 17, 16],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var fluxoCaixaData = {
+            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+            datasets: [{
+                label: 'Previsão de Fluxo de Caixa',
+                data: [5000, 5500, 6000, 5800, 5600],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        var receitasDespesasData = {
+            labels: ["Receitas Realizadas", "Despesas Realizadas", "Receitas Previstas", "Despesas Previstas"],
+            datasets: [{
+                label: 'Receitas e Despesas',
+                data: [5000, 4000, 6000, 4500],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configurações padrão dos gráficos
+        var chartOptions = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+
+        // Renderizando os gráficos
+        var consumoAguaChart = new Chart(document.getElementById('consumoAguaChart'), {
+            type: 'line',
+            data: consumoAguaData,
+            options: chartOptions
+        });
+
+        var consumoGasChart = new Chart(document.getElementById('consumoGasChart'), {
+            type: 'line',
+            data: consumoGasData,
+            options: chartOptions
+        });
+
+        var fluxoCaixaChart = new Chart(document.getElementById('fluxoCaixaChart'), {
+            type: 'line',
+            data: fluxoCaixaData,
+            options: chartOptions
+        });
+
+        var receitasDespesasChart = new Chart(document.getElementById('receitasDespesasChart'), {
+            type: 'bar',
+            data: receitasDespesasData,
+            options: chartOptions
+        });
+    </script>
+    {% endblock %}

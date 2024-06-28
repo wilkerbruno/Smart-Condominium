@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="inicio.html">
+    <link rel="stylesheet" href="../css/inicio.css">
+	<link rel="stylesheet" href="../css/cobranca.css">
+	<link rel="stylesheet" href="../css/menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	
+	
+</head>
+<body>
+
+    <header>
+        <h1>Smart Condominium</h1>
+        <span id="menu-toggle" class="menu-toggle">
+            
+        </span>
+    </header>
+
+    <input type ="checkbox" id="chec">
+        <label class="menu" for="chec">
+            <img src ="../img/menu.png"/>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+                <li><a  class="amenu" href="inicio.html">Painel</a></li>
+                <li><a class="amenu" href="units.html">Unidades</a></li>
+                <li><a class="amenu" href="residents.html">Moradores</a></li>
+                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+                <li><a class="amenu" href="reservas.html">Reservas</a></li>
+                <li><a class="amenu"  href="administration.html">Administração</a></li>
+            </ul>
+        </nav>
+    <form>
+        <h2  class="cadastrar_condominio"><a href="todas_cobrancas.html"><img src="../img/mais.png"/> Ver todas as cobranças</a></h2>
+        <fieldset>
+		
+            <legend>Informações principais</legend>
+            <label>Data de emissão:</label>
+            <input class="data" type="date" value="01/09/2018" required>
+            <label>Número:</label>
+            <input class="data" type="text" value="2018-9" required>
+            <label>Moradia:</label>
+            <input class="data"type="text" value="U - 202" required>
+            <label>Descrição:</label>
+            <textarea required>Mensalidade do condomínio</textarea>
+            <label>Data de vencimento:</label>
+            <input class="data" type="date" value="10/10/2018" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Valores</legend>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor</th>
+                        <th>Motivo da emissão</th>
+                        <th>Juros</th>
+                        <th>Multa</th>
+                        <th>Outros acréscimos</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="campos">
+                        <td>
+                            <input type="text" value="130.00" required>
+                        </td>
+                        <td>
+                            <input type="text" value="Normal" required>
+                        </td>
+                        <td>
+                            <input type="text" value="1.52" required>
+                        </td>
+                        <td>
+                            <input type="text" value="2.60" required>
+                        </td>
+                        <td>
+                            <input type="text" value="0.00" required>
+                        </td>
+                        <td>
+                            <input type="text" value="134.12" required>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+        <button type="submit">Gerar cobrança</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/* Igualar o código CSS existente */
+
+/* CSS para as imagens e títulos redondos */
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+.circle {
+    background-color: #f7f7f7;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+}
+
+.circle-content {
+    text-align: center;
+}
+
+.circle-content img {
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.circle-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Deixar as ancoras completamente clicáveis */
+
+.circle-container a {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-bottom: 10;
+}
+
+a{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.cadastrar_condominio{
+
+    text-decoration: none;
+    margin-left: 75%;
+    margin-top: -4%;
+    font-size: 20px;
+    
+}
+
+h2 a img{
+
+    max-width: 17px;
+}
+
+main{
+    margin-top: 60px;
+    margin-bottom: auto;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/inicio.js"></script>
+  <title>{{ titulo }}</title>
+</head>
+
+<body>
+  <header>
+    <h1>Smart Condominium</h1>
+    <span id="menu-toggle" class="menu-toggle">
+        
+    </span>
+    <form id="search-form" action="{{ url_for('pesquisar') }}" method="post">
+      <input type="search" id="search-input" name="search-input" placeholder="Pesquisar...">
+      <button id="search-button">Pesquisar</button>
+      <ul id="search-results"></ul>
+    </form>
+</header>
+
+<input type ="checkbox" id="chec">
+<label class="menu" for="chec">
+    <img src ="../img/menu.png"/>
+</label>
+
+<nav>
+    <ul>
+        <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+        <li><a  class="amenu" href="inicio.html">Painel</a></li>
+        <li><a class="amenu" href="units.html">Unidades</a></li>
+        <li><a class="amenu" href="residents.html">Moradores</a></li>
+        <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+        <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+        <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+        <li><a class="amenu" href="reservas.html">Reservas</a></li>
+        <li><a class="amenu"  href="administration.html">Administração</a></li>
+    </ul>
+</nav>
+
+    {% if not g.logado %}
+    <a class="img_login"><img src="{{ url_for('static', filename='img/login.com' )}}" alt=""></a>
+    <div id="login-form" class="login-form">
+      <form  method="post">
+        <label for="username">Usuário:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Senha:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Entrar">
+        <a class="inscrever" href="{{ url_for('inscrever') }}"> Inscreva-se</a>
+      </form>
+    </div>
+
+    {% else %}
+    <a class="img_login"><img src="{{ url_for('static', filename='img/login.com' )}}" alt=""></a>
+    <div id="logado" class="login-form">
+      <a class="nome_usuario">Nome: {{ g.nome }}</a>
+      <a class="nome_usuario">E-mail: {{ g.email }}</a>
+      <a class="nome_usuario">CPF/CNPJ: {{ g.cpf_cnpj }}</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    {% endif %}
+
+    <script>
+      document.querySelector('.img_login').addEventListener('click', function () {
+        var loginForm = document.querySelector('.login-form');
+        if (loginForm.style.display === 'none' || loginForm.style.display === '') {
+          loginForm.style.display = 'block';
+        } else {
+          loginForm.style.display = 'none';
+        }
+      });
+    </script>
+  </header>
+
+  <input type="checkbox" id="chec">
+  <label class="menu" for="chec">
+    <img src="{{ url_for('static', filename='img/menu.png') }}" />
+  </label>
+
+  <nav>
+    <ul>
+      <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+      <li><a  class="amenu" href="inicio.html">Painel</a></li>
+      <li><a class="amenu" href="units.html">Unidades</a></li>
+      <li><a class="amenu" href="residents.html">Moradores</a></li>
+      <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+      <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+      <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+      <li><a class="amenu" href="reservas.html">Reservas</a></li>
+      <li><a class="amenu"  href="administration.html">Administração</a></li>
+  </ul>
+
+    <script src="../static/js/email.js"></script>
+  </nav>
+
+  {% block conteudo_body %}
+  {% endblock %}
+  <a id="support-button" class="support-button"><img src="{{ url_for('static', filename='img/suporte.png') }}"
+      alt="Suporte"></a>
+  <div id="support-chat" class="support-chat">
+    <h2>Suporte</h2>
+    <div id="support-messages" class="support-messages">
+
+      <span class="${isUser ? 'user-bubble' : 'support-bubble'}">
+        <span class="${isUser ? 'user-text' : 'support-text'}"></span>
+    </div>
+    <div class="campo-digitar">
+      <input type="text" id="support-input" class="support-input" placeholder="Digite sua mensagem...">
+      <button id="send-button" class="send-button">Enviar</button>
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer>
+    <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
+</footer>
+<script src="../static/js/suporte.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastr_unit.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>Condominium Unit Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Smart Condominium</h1>
+        <span id="menu-toggle" class="menu-toggle">
+            
+        </span>
+    </header>
+
+    <input type ="checkbox" id="chec">
+        <label class="menu" for="chec">
+            <img src ="../img/menu.png"/>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
+                <li><a  class="amenu" href="inicio.html">Painel</a></li>
+                <li><a class="amenu" href="units.html">Unidades</a></li>
+                <li><a class="amenu" href="residents.html">Moradores</a></li>
+                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
+                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
+                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
+                <li><a class="amenu" href="reservas.html">Reservas</a></li>
+                <li><a class="amenu"  href="administration.html">Administração</a></li>
+            </ul>
+        </nav>
+    
+    <h2>Registro de Moradores</h2>
+    <main class="registro_unidades">
+        <form id="unit-registration-form">
+            <section>
+                <div class="unidade">
+                    <label for="unidade_veiculo">Unidade:</label>
+                    <input type="text" id="unidade_veiculo" name="unidade_veiculo" required>
+                </div>
+                <div class="form-group2">
+                    <label for="dono_veiculo">Dono do veiculo:</label>
+                    <input type="text" id="dono_veiculo" name="dono_veiculo" required>
+                </div>
+                <div class="form-group2">
+                    <label for="telefone_dono">Telefone:</label>
+                    <input type="tel" id="telefone_dono" name="telefone_dono" required>
+                </div>
+                <div class="form-group2">
+                    <label for="tipo_veiculo">Tipo de veiculo:</label>
+                    <select id="tipo_veiculo" name="tipo_veiculo" required>
+                        <option value=""></option>
+                            <option value="moto">Moto</option>
+                            <option value="carro">Carro</option>
+                            <option value="triciculo">Triciculo</option>
+                            <option value="caminhao">Caminhão</option>
+                    </select>
+                </div>
+            </section>
+           
+            <section>
+                <div class="form-group">
+                    <label for="marca_veiculo">Marca:</label>
+                    <input type="text" id="marca_veiculo" name="marca_veiculo" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo_veiculo">Modelo:</label>
+                    <input type="text" id="modelo_veiculo" name="modelo_veiculo" required>
+                </div>
+                <div class="unidade">
+                    <label for="cor_veiculo">Cor:</label>
+                    <input type="text" id="cor_veiculo" name="cor_veiculo" required>
+                </div>
+                <div class="unidade">
+                    <label for="placa_veiculo">Placa:</label>
+                    <input type="text" id="placa_veiculo" name="placa_veiculo" required>
+                </div>
+                        
+                    
+                    
+                </div>
+            </section>
+            <button type="submit">Cadastrar Veiculo</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
