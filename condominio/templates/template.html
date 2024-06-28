@@ -15,12 +15,7 @@
     <h1>Smart Condominium</h1>
     <span id="menu-toggle" class="menu-toggle">
         
-    </span>
-    <form id="search-form" action="{{ url_for('pesquisar') }}" method="post">
-      <input type="search" id="search-input" name="search-input" placeholder="Pesquisar...">
-      <button id="search-button">Pesquisar</button>
-      <ul id="search-results"></ul>
-    </form>
+    
 </header>
 
 <input type ="checkbox" id="chec">
@@ -85,15 +80,15 @@
 
   <nav>
     <ul>
-      <li><a class="amenu" href="Condominio.html">Condominio</a></li>
-      <li><a  class="amenu" href="inicio.html">Painel</a></li>
-      <li><a class="amenu" href="units.html">Unidades</a></li>
-      <li><a class="amenu" href="residents.html">Moradores</a></li>
-      <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
-      <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
-      <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
-      <li><a class="amenu" href="reservas.html">Reservas</a></li>
-      <li><a class="amenu"  href="administration.html">Administração</a></li>
+      <li><a class="amenu" href="{{ url_for('condominio') }}">Condominio</a></li>
+      <li><a  class="amenu" href="{{ url_for('index') }}">Painel</a></li>
+      <li><a class="amenu" href="{{ url_for('units) }}">Unidades</a></li>
+      <li><a class="amenu" href="{{ url_for('residents') }}">Moradores</a></li>
+      <li><a class="amenu" href="{{ url_for('funcionarios) }}">Funcionarios</a></li>
+      <li><a class="amenu" href="{{ url_for('cobranca) }}">Cobranças</a></li>
+      <li><a class="amenu" href="{{ url_for('veiculo') }}">Veiculo</a></li>
+      <li><a class="amenu" href="{{ url_for('reservas') }}">Reservas</a></li>
+      <li><a class="amenu"  href="{{ url_for('sobre') }}">Sobre</a></li>
   </ul>
 
     <script src="../static/js/email.js"></script>
