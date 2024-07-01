@@ -28,9 +28,9 @@ input[type="checkbox"]{
  
 nav{
     background-color: rgba(16, 16, 16, .5);
-    width: 350px;
+    width: 200px;
     height: 100%;
-    left: -350px;
+    left: -200px;
     position: absolute;
     transition: all .5s;
     z-index: 2;
@@ -39,7 +39,7 @@ nav{
 }   
 
 input[type="checkbox"]:checked ~nav{
-    transform: translateX(350px); 
+    transform: translateX(200px); 
 }
 
 ul{

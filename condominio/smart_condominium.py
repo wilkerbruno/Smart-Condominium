@@ -41,6 +41,10 @@ def cadastro_unit():
 def cadastro_veiculo():
     return render_template("cadastro_veiculo.html", titulo="Cadastro de Veiculos")
 
+@app.route("/veiculo")
+def veiculo():
+    return render_template("veiculo.html", titulo="veiculos ")
+
 @app.route("/cobranca")
 def cobranca():
     return render_template("cobranca.html", titulo="Cobranças")
@@ -68,6 +72,11 @@ def residents():
 @app.route("/resultados")
 def resultados():
     return render_template("resultados.html", titulo="Resultados")
+
+@app.route("/units")
+def units():
+    return render_template("units.html", titulo="units")
+
 
 
 
