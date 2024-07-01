@@ -1,40 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastr_unit.css">
-    <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="stylesheet" href="../css/menu.css">
-    <title>Condominium Unit Registration</title>
-</head>
-<body>
-    <header>
-        <h1>Smart Condominium</h1>
-        <span id="menu-toggle" class="menu-toggle">
-            
-        </span>
-    </header>
+{% extends "template.html" %}
 
-    <input type ="checkbox" id="chec">
-        <label class="menu" for="chec">
-            <img src ="../img/menu.png"/>
-        </label>
+{% block conteudo_body %}
 
-        <nav>
-            <ul>
-                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
-                <li><a  class="amenu" href="inicio.html">Painel</a></li>
-                <li><a class="amenu" href="units.html">Unidades</a></li>
-                <li><a class="amenu" href="residents.html">Moradores</a></li>
-                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
-                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
-                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
-                <li><a class="amenu" href="reservas.html">Reservas</a></li>
-                <li><a class="amenu"  href="administration.html">Administração</a></li>
-            </ul>
-        </nav>
-    
+
     <h2>Fazer reservas</h2>
     <main class="registro_unidades">
         <form id="unit-registration-form">
@@ -95,9 +63,5 @@
             <button type="submit">Reservar</button>
         </form>
     </main>
-    <footer>
-        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
-    </footer>
-    <script src="scripts.js"></script>
-</body>
-</html>
+    
+    {% endblock %}

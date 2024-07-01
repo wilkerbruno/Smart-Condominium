@@ -1,45 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
-    "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg"
-      xml:lang="en-US">
+{% extends "template.html" %}
 
-<head>
-<link rel="stylesheet" href="../css/home.css">
-    <title>Painel de Controle</title>
- 
-</head>
+{% block conteudo_body %}
 
-<body>
-    <header>
-        <h1>Smart Condominium</h1>
-        <span id="menu-toggle" class="menu-toggle">
-            
-        </span>
-    </header>
 
-    <input type ="checkbox" id="chec">
-        <label class="menu" for="chec">
-            <img src ="../img/menu.png"/>
-        </label>
-
-    <nav>
-        <ul>
-            <li><a href="Condominio.html">Condominio</a></li>
-            <li><a href="inicio.html">Painel</a></li>
-            <li><a href="units.html">Unidades</a></li>
-            <li><a href="residents.html">Moradores</a></li>
-            <li><a href="funcionarios.html">Funcionarios</a></li>
-            <li><a href="cobranca.html">Cobranças</a></li>
-            <li><a href="veiculo.html">Veiculo</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="administration.html">Administração</a></li>
-        </ul>
-    </nav>
-    </header>
-     
 
     <div id="pagewrap">
        
@@ -76,10 +39,5 @@
             </div>
         </div>
 
-        <footer>
-            <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-
-</html>
+            
+    {% endblock %}

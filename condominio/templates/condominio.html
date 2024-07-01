@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "template.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="stylesheet" href="../css/condominio.css">
-    <title>Condominium Management System - Cadastro de Condomínio</title>
-</head>
-
-<body>
-    <header>
-        <h1>Smart Condominium</h1>
-    </header>
-    
+{% block conteudo_body %}
 
     <main>
         <h2>Selecione o condominio</h2>
-        <h2  class="cadastrar_condominio"><a href="cadastro_condominio.html"><img src="../img/mais.png"/> Cadastrar Condominio</a></h2>
+        <h2  class="cadastrar_condominio"><a href="cadastro_condominio.html"><img src="{{ url_for('static', filename='img/mais.png' )}}"/> Cadastrar Condominio</a></h2>
 
         <div class="circle-container">
-            <a href="../html/inicio.html">
+            <a href="../html/inicio.html" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 1">
@@ -29,7 +16,7 @@
                 </div>
             </a>
 
-            <a href="https://example.com/link2">
+            <a href="https://example.com/link2" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 2">
@@ -37,7 +24,7 @@
                     </div>
                 </div>
             </a>
-            <a href="https://example.com/link1">
+            <a href="https://example.com/link1" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 1">
@@ -46,7 +33,7 @@
                 </div>
             </a>
 
-            <a href="https://example.com/link2">
+            <a href="https://example.com/link2" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 2">
@@ -54,7 +41,7 @@
                     </div>
                 </div>
             </a>
-            <a href="https://example.com/link1">
+            <a href="https://example.com/link1" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 1">
@@ -63,7 +50,7 @@
                 </div>
             </a>
 
-            <a href="https://example.com/link2">
+            <a href="https://example.com/link2" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 2">
@@ -71,7 +58,7 @@
                     </div>
                 </div>
             </a>
-            <a href="https://example.com/link1">
+            <a href="https://example.com/link1" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 1">
@@ -80,7 +67,7 @@
                 </div>
             </a>
 
-            <a href="https://example.com/link2">
+            <a href="https://example.com/link2" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 2">
@@ -88,7 +75,7 @@
                     </div>
                 </div>
             </a>
-            <a href="https://example.com/link1">
+            <a href="https://example.com/link1" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 1">
@@ -97,7 +84,7 @@
                 </div>
             </a>
 
-            <a href="https://example.com/link2">
+            <a href="https://example.com/link2" class= "a_condominios">
                 <div class="circle">
                     <div class="circle-content">
                         <img src="https://via.placeholder.com/120" alt="Imagem 2">
@@ -111,11 +98,4 @@
 
     </main>
 
-
-    <footer>
-        <p> &copy; 2023 Smart Condominium. All rights reserved.</p>
-    </footer>
-
-</body>
-
-</html>
+    {% endblock %}

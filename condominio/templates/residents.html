@@ -1,47 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/todas_cobrancas.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-</head>
+{% extends "template.html" %}
 
-<body>
-    <header>
-        <h1>Smart Condominium</h1>
-        <span id="menu-toggle" class="menu-toggle">
-            
-        </span>
-    </header>
+{% block conteudo_body %}
 
-    <input type ="checkbox" id="chec">
-        <label class="menu" for="chec">
-            <img src ="../img/menu.png"/>
-        </label>
 
-        <nav>
-          <ul>
-              <li><a class="amenu" href="Condominio.html">Condominio</a></li>
-              <li><a  class="amenu" href="inicio.html">Painel</a></li>
-              <li><a class="amenu" href="units.html">Unidades</a></li>
-              <li><a class="amenu" href="residents.html">Moradores</a></li>
-              <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
-              <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
-              <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
-              <li><a class="amenu" href="reservas.html">Reservas</a></li>
-              <li><a class="amenu"  href="administration.html">Administração</a></li>
-          </ul>
-      </nav>
 
     
 
     <input type="search" id="search" onkeyup="searchFunction()" placeholder="Procurar na lista..." title="Type in a name">
 
-    <h2  class="cadastrar_condominio"><a href="cadastro_morador.html"><img src="../img/mais.png"/> Cadastrar Morador</a></h2>
+    <h2  class="cadastrar_condominio"><a href="cadastro_morador.html"><img src="{{ url_for('static', filename='img/mais.png' )}}"/> Cadastrar Morador</a></h2>
 
 
     <table id="myTable">
@@ -161,9 +128,9 @@
         </tbody>
     </table>
     <div class="pagination">
-        <button id="prev" class="btn_setas"><img class="setas" src="../img/seta-esquerda.png"/></button>
+        <button id="prev" class="btn_setas"><img class="setas" src="{{ url_for('static', filename='img/seta-esquerda.png' )}}"/></button>
         <a class="n_page"><span id="page-info"></span></a>
-        <button id="next" class="btn_setas" ><img class="setas" src="../img/seta-direita.png"/></button>
+        <button id="next" class="btn_setas" ><img class="setas" src="{{ url_for('static', filename='img/seta-direita.png' )}}"/></button>
       </div>
 
     <script>
@@ -245,8 +212,7 @@ updateTable();
 updatePageInfo();
     </script>
 
-<footer>
-    <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
-</footer>
-</body>
-</html>
+
+
+    
+{% endblock %}

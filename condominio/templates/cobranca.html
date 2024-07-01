@@ -1,45 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-	<link rel="stylesheet" href="inicio.html">
-    <link rel="stylesheet" href="../css/inicio.css">
-	<link rel="stylesheet" href="../css/cobranca.css">
-	<link rel="stylesheet" href="../css/menu.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-	
-	
-</head>
-<body>
-
-    <header>
-        <h1>Smart Condominium</h1>
-        <span id="menu-toggle" class="menu-toggle">
-            
-        </span>
-    </header>
-
-    <input type ="checkbox" id="chec">
-        <label class="menu" for="chec">
-            <img src ="../img/menu.png"/>
-        </label>
-
-        <nav>
-            <ul>
-                <li><a class="amenu" href="Condominio.html">Condominio</a></li>
-                <li><a  class="amenu" href="inicio.html">Painel</a></li>
-                <li><a class="amenu" href="units.html">Unidades</a></li>
-                <li><a class="amenu" href="residents.html">Moradores</a></li>
-                <li><a class="amenu" href="funcionarios.html">Funcionarios</a></li>
-                <li><a class="amenu" href="cobranca.html">Cobranças</a></li>
-                <li><a class="amenu" href="veiculo.html">Veiculo</a></li>
-                <li><a class="amenu" href="reservas.html">Reservas</a></li>
-                <li><a class="amenu"  href="administration.html">Administração</a></li>
-            </ul>
-        </nav>
+{% endblock %}
     <form>
-        <h2  class="cadastrar_condominio"><a href="todas_cobrancas.html"><img src="../img/mais.png"/> Ver todas as cobranças</a></h2>
+        <h2  class="cadastrar_condominio"><a href="todas_cobrancas.html"><img src="{{ url_for('static', filename='img/mais.png' )}}"/> Ver todas as cobranças</a></h2>
         <fieldset>
 		
             <legend>Informações principais</legend>
@@ -95,9 +56,4 @@
 
         <button type="submit">Gerar cobrança</button>
     </form>
-
-    <footer>
-        <p>&copy; 2023 Smart Condominium. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    {% endblock %}
