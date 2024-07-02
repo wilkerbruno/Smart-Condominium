@@ -35,6 +35,17 @@
         </form>
       </div>
 
+      <script>
+        document.querySelector('.img_login').addEventListener('click', function () {
+          var loginForm = document.querySelector('.login-form');
+          if (loginForm.style.display === 'none' || loginForm.style.display === '') {
+            loginForm.style.display = 'block';
+          } else {
+            loginForm.style.display = 'none';
+          }
+        });
+      </script>
+
 </header>
 
 <input type ="checkbox" id="chec">

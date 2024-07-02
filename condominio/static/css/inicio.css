@@ -496,7 +496,7 @@ h2 a img{
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #2E865F;
+    background-color: rgba(16, 16, 16, .5);
     border: 1px solid #ccc;
     padding: 10px;
   }
@@ -521,7 +521,7 @@ h2 a img{
   }
   
   .login-form input[type="submit"] {
-    background-color: #3CB371;
+    background-color: rgba(0, 0, 0, 1);;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -530,7 +530,7 @@ h2 a img{
   }
   
   .login-form input[type="submit"]:hover {
-    background-color: #2E865F;
+    background-color: #333;
   }
   
   .inscrever{
