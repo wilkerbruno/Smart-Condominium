@@ -25,7 +25,6 @@ header {
     background-color: #333;
     color: white;
     padding: 1rem;
-    text-align: center;
     position: fixed;
     width: 100%;
     z-index: 20;
@@ -35,6 +34,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 1.5rem;
+    margin-left: 20px;
 }
 /*
 nav {
@@ -445,3 +445,97 @@ h2 a img{
 }
 
   /*fim pagina condominio*/
+
+  /* campo de pesquisa */
+  #search-form {
+    position: absolute;
+    display: inline-block;
+    margin-left: 400px;
+    margin-top: -200px;
+    
+  }
+  
+  #search-input {
+    width: 450px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius:16px;
+  }
+  
+  #search-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  #search-button:hover {
+    background-color: rgba(0, 0, 0, 1);;
+  }
+
+  /* fim campo de pesquisa */
+
+  /* login */
+  .img_login{
+    position: absolute;
+    margin-left: 1240px;
+    cursor: pointer;
+    margin-top: -40px;
+    border-radius: 10px;
+  
+  }
+
+
+  
+.login-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2E865F;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .login-form form {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-form input[type="submit"] {
+    background-color: #3CB371;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form input[type="submit"]:hover {
+    background-color: #2E865F;
+  }
+  
+  .inscrever{
+    color: #fff;
+  }
+  
+  
+  /* fim login */

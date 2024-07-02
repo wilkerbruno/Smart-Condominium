@@ -13,12 +13,28 @@
 
 <body>
   <header>
-    <h1>Smart Condominium</h1>
+    <h1 >Smart Condominium</h1>
     <span id="menu-toggle" class="menu-toggle">
 
-    
-        
-    
+      <form id="search-form" method="post">
+        <input type="search" id="search-input" name="search-input" placeholder="Pesquisar...">
+        <button id="search-button">Pesquisar</button>
+        <ul id="search-results"></ul>
+      </form>
+
+      <a class="img_login"><img src="{{ url_for('static', filename='img/login.png' )}}" alt=""></a>
+
+      <div id="login-form" class="login-form">
+        <form  method="post">
+          <label for="username">Usuário:</label><br>
+          <input type="text" id="username" name="username"><br>
+          <label for="password">Senha:</label><br>
+          <input type="password" id="password" name="password"><br>
+          <input type="submit" value="Entrar">
+          <a class="inscrever" href="#"> Inscreva-se</a>
+        </form>
+      </div>
+
 </header>
 
 <input type ="checkbox" id="chec">
