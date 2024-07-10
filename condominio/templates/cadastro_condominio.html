@@ -4,7 +4,7 @@
 
 <main class="main_cadastros">
     <h2>Cadastro de Condomínio</h2>
-    <form id="cadastro-condominio-form" class="form-group">
+    <form id="cadastro-condominio-form" class="form-group" action="{{ url_for('cadastrar') }}" method="post">
         <section>
             <div class="form-group">
                 <label for="nome-condominio">Nome do Condomínio:</label>
@@ -65,7 +65,7 @@
             <label for="observacoes">Observações:</label>
             <textarea id="observacoes" name="observacoes" rows="5" required></textarea>
         </div>
-        <button type="submit">Cadastrar Condomínio</button>
+        <input class="btn_cadastrar" type="submit" value="Cadastrar Condomínio"><br><br>
     </form>
 </main>
 

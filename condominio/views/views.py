@@ -8,16 +8,9 @@ def index():
     return render_template("index.html", titulo="Smart condominium | Home")
 
 
-@app.route("/cadastro_condominio")
-def cadastro_condominio():
-    return render_template("cadastro_condominio.html", titulo="Cadastro de Condominios")
-
-
 @app.route("/cadastro_funcionario")
 def cadastro_funcionario():
-    return render_template(
-        "cadastro_funcionario.html", titulo="Cadastro de Funcionario"
-    )
+    return render_template("cadastro_funcionario.html", titulo="Cadastro de Funcionario")
 
 
 @app.route("/sobre")
@@ -35,24 +28,9 @@ def cadastro_unit():
     return render_template("cadastro_unit.html", titulo="cadastro de Unidades")
 
 
-@app.route("/cadastro_veiculo")
-def cadastro_veiculo():
-    return render_template("cadastro_veiculo.html", titulo="Cadastro de Veiculos")
-
-
-@app.route("/veiculo")
-def veiculo():
-    return render_template("veiculo.html", titulo="veiculos ")
-
-
 @app.route("/cobranca")
 def cobranca():
     return render_template("cobranca.html", titulo="Cobranças")
-
-
-@app.route("/condominio")
-def condominio():
-    return render_template("condominio.html", titulo="Condominio")
 
 
 @app.route("/fazer_reservas")
@@ -68,11 +46,6 @@ def funcionarios():
 @app.route("/reservas")
 def reservas():
     return render_template("reservas.html", titulo="Reservas")
-
-
-@app.route("/residents")
-def residents():
-    return render_template("residents.html", titulo="Residents")
 
 
 @app.route("/resultados")
