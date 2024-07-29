@@ -539,3 +539,11 @@ h2 a img{
   
   
   /* fim login */
+
+  .botao_pesquisar{
+    position: relative;
+    margin-left: 460px;
+    margin-top: -40px;
+    width: 110px;
+
+  }
