@@ -5,7 +5,7 @@
 
     
 
-    <input type="search" id="search" onkeyup="searchFunction()" placeholder="Procurar na lista..." title="Type in a name">
+    <input type="search" id="search" class="pesquisa" onkeyup="searchFunction()" placeholder="Procurar na lista..." title="Type in a name">
 
     <h2  class="cadastrar_condominio"><a href="{{ url_for('cadastro_unit') }}"><img src="{{ url_for('static', filename='img/mais.png' )}}"/> Cadastrar Unidade</a></h2>
     
@@ -201,7 +201,7 @@ const currentPage = document.getElementById("page-info");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 let currentRow = 0;
-let rowsPerPage = 11;
+let rowsPerPage = 9;
 
 input.addEventListener("keyup", function (event) {
   let filterValue = event.target.value.toUpperCase();

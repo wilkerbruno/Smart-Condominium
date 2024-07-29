@@ -168,9 +168,7 @@ button {
     width: 100%;
 }
 
-button:hover {
-    background-color: #666;
-}
+
 
 section {
     display: flex;

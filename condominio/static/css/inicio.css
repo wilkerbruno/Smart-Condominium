@@ -209,6 +209,9 @@ body {
 .n_page{
 
     font-size: 20px;
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 140px;
 
 }
 
@@ -222,6 +225,15 @@ body {
     font-size: 30px;
 }
 
+#prev{
+    margin-left: -98px;
+    margin-top: -12px;
+}
+
+#next{
+    margin-top: -100px;
+
+}
 
 /* suporte*/
 
@@ -430,14 +442,7 @@ body {
     margin-bottom: 30px;
 }
 
-.cadastrar_condominio{
 
-    text-decoration: none;
-    margin-left: 75%;
-    margin-top: -4%;
-    font-size: 20px;
-    
-}
 
 h2 a img{
 
@@ -461,6 +466,7 @@ h2 a img{
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius:16px;
+    position: fixed;
   }
   
   #search-button {
@@ -471,6 +477,13 @@ h2 a img{
     font-size: 16px;
     cursor: pointer;
     border-radius: 20px;
+  }
+  .pesquisa{
+    position: fixed;
+  }
+
+  #myTable{
+    margin-top: 230px;
   }
   
   #search-button:hover {
@@ -542,8 +555,9 @@ h2 a img{
 
   .botao_pesquisar{
     position: relative;
-    margin-left: 460px;
-    margin-top: -40px;
+    margin-left: 10px;
+    margin-top: 30px;
     width: 110px;
 
   }
+
