@@ -454,9 +454,9 @@ h2 a img{
   /* campo de pesquisa */
   #search-form {
     position: absolute;
-    display: inline-block;
     margin-left: 400px;
-    margin-top: -200px;
+    display: inline-block;
+    max-width: 80%;
     
   }
   
@@ -466,6 +466,7 @@ h2 a img{
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius:16px;
+    margin-top: -35px;
     position: fixed;
   }
   
@@ -477,6 +478,9 @@ h2 a img{
     font-size: 16px;
     cursor: pointer;
     border-radius: 20px;
+    margin-left: 460px;
+    width: 110px;
+    margin-top: -35px;
   }
   .pesquisa{
     position: fixed;
@@ -553,11 +557,5 @@ h2 a img{
   
   /* fim login */
 
-  .botao_pesquisar{
-    position: relative;
-    margin-left: 10px;
-    margin-top: 30px;
-    width: 110px;
 
-  }
 
