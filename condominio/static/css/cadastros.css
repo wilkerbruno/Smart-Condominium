@@ -133,6 +133,8 @@ h2 {
     margin-bottom: 20px;
 }
 
+
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -143,7 +145,7 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-top: 4px;
     border: 1px solid #ccc;
@@ -183,3 +185,19 @@ section .form-group {
 section .form-group:last-child {
     margin-right: 0;
 }
+
+.select_veiculo{
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.last_label{
+    margin-left: 20px;
+
+}
+
