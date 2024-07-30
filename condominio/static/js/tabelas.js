@@ -1,4 +1,5 @@
-const input = document.getElementById("search");
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("search");
   const filter = document.getElementById("myTable");
   const currentPage = document.getElementById("page-info");
   const prevButton = document.getElementById("prev");
@@ -74,3 +75,4 @@ const input = document.getElementById("search");
 
   updateTable();
   updatePageInfo();
+});
