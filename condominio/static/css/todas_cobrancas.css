@@ -78,8 +78,18 @@
 
             text-decoration: none;
             margin-left: 75%;
-            margin-top: 11%;
+            margin-top: 500px;
             font-size: 20px;
             position: fixed;
+            
+        }
+
+        .cadastrar_condominios{
+
+            text-decoration: none;
+            margin-left: 75%;
+            margin-top: 11%;
+            font-size: 20px;
+            position: relative;
             
         }

@@ -480,10 +480,17 @@ h2 a img{
     border-radius: 20px;
     margin-left: 460px;
     width: 110px;
-    margin-top: -35px;
+    margin-top: -36px;
   }
   .pesquisa{
     position: fixed;
+    margin-top: 150px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 20%;
+    padding: 10px;
   }
 
   #myTable{

@@ -96,10 +96,26 @@
             </tr>
         </tbody>
     </table>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Unidade</th>
+            <th>CPF</th>
+            <th>Morador</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="myTableBody">
+          <!-- Linhas da tabela serão inseridas aqui pelo JavaScript -->
+        </tbody>
+      </table>
     <div class="pagination">
-        <button id="prev" class="btn_setas"><img class="setas" src="{{ url_for('static', filename='img/seta-esquerda.png' )}}/></button>
-        <a class="n_page"><span id="page-info"></span></a>
-        <button id="next" class="btn_setas" ><img class="setas" src="{{ url_for('static', filename='img/seta-direita.png' )}}"/></button>
-      </div>
+      <button id="prev" class="btn_setas">Anterior</button>
+      <div id="page-numbers"></div>
+      <button id="next" class="btn_setas">Próximo</button>
+    </div>
 
 {% endblock %}
