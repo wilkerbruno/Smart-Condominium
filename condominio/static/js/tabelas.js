@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("search");
   const filter = document.getElementById("myTable");
   const currentPage = document.getElementById("page-info");
@@ -75,4 +75,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateTable();
   updatePageInfo();
+});
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  const rowsPerPage = 5;
+  const table = document.getElementById("myTableBody");
+  const rows = Array.from(table.getElementsByTagName("tr"));
+  const totalPages = Math.ceil(rows.length / rowsPerPage);
+  let currentPage = 1;
+
+  const pageNumbers = document.getElementById("page-numbers");
+  const pageInfo = document.getElementById("page-info");
+
+  function displayRowsForPage(page) {
+    table.innerHTML = "";
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    const rowsToDisplay = rows.slice(start, end);
+
+    rowsToDisplay.forEach(row => table.appendChild(row));
+    updatePageInfo();
+    highlightCurrentPage();
+  }
+
+  function updatePageInfo() {
+    pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
+  }
+
+  function createPageButtons() {
+    pageNumbers.innerHTML = "";
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement("button");
+      button.textContent = i;
+      button.className = "page-button";
+      button.addEventListener("click", () => {
+        currentPage = i;
+        displayRowsForPage(currentPage);
+      });
+      pageNumbers.appendChild(button);
+    }
+  }
+
+  function highlightCurrentPage() {
+    const buttons = document.querySelectorAll(".page-button");
+    buttons.forEach((button, index) => {
+      if (index === currentPage - 1) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+  }
+
+  document.getElementById("prev").addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      displayRowsForPage(currentPage);
+    }
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      displayRowsForPage(currentPage);
+    }
+  });
+
+  createPageButtons();
+  displayRowsForPage(currentPage);
 });
