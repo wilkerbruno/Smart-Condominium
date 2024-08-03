@@ -28,6 +28,8 @@ header {
     position: fixed;
     width: 100%;
     z-index: 20;
+    top: 0;
+    left: 0;
 
 }
 
@@ -217,7 +219,7 @@ body {
 
 .pagination{
 
-    margin-left: 70%;
+    margin-left: 60%;
     margin-top: -20px;
 }
 #menu-container{
@@ -437,6 +439,8 @@ body {
     margin-bottom: 10;
 }
 
+
+
 .a_condominios{
     margin-right: 30px;
     margin-bottom: 30px;
@@ -481,6 +485,10 @@ h2 a img{
     margin-left: 460px;
     width: 110px;
     margin-top: -36px;
+    position: absolute;
+  }
+
+  .botao_pesquisar{
   }
   .pesquisa{
     position: fixed;
@@ -494,7 +502,7 @@ h2 a img{
   }
 
   #myTable{
-    margin-top: 230px;
+    margin-top: 210px;
   }
   
   #search-button:hover {

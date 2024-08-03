@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const rowsPerPage = 9; // Máximo de 9 linhas por página
-  const tableBody = document.getElementById("myTableBody");
+  document.addEventListener("DOMContentLoaded", function () {
+    const rowsPerPage = 8; // Máximo de 8 linhas por página
+    const tableBody = document.getElementById("myTableBody");
+    const input = document.getElementById("search");
 
   // Dados fictícios para a tabela
   const data = [
@@ -299,7 +300,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
   
   ];
-
   const totalPages = Math.ceil(data.length / rowsPerPage);
   let currentPage = 1;
 
@@ -393,6 +393,58 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Filtragem da tabela conforme o texto do input
+  function searchFunction() {
+    const filter = input.value.toUpperCase();
+    const filteredData = data.filter(item => {
+      return (
+        item.unidade.toUpperCase().includes(filter) ||
+        item.cpf.toUpperCase().includes(filter) ||
+        item.morador.toUpperCase().includes(filter) ||
+        item.telefone.toUpperCase().includes(filter) ||
+        item.celular.toUpperCase().includes(filter) ||
+        item.email.toUpperCase().includes(filter) ||
+        item.status.toUpperCase().includes(filter)
+      );
+    });
+    currentPage = 1; // Reinicia para a primeira página nos resultados filtrados
+    updateTable(filteredData);
+  }
+
+  // Atualiza a tabela com os dados filtrados
+  function updateTable(filteredData) {
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    const rowsToDisplay = filteredData.slice(start, end);
+
+    tableBody.innerHTML = "";
+
+    rowsToDisplay.forEach(row => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${row.unidade}</td>
+        <td>${row.cpf}</td>
+        <td>${row.morador}</td>
+        <td>${row.telefone}</td>
+        <td>${row.celular}</td>
+        <td>${row.email}</td>
+        <td>${row.status}</td>
+      `;
+      tableBody.appendChild(tr);
+    });
+
+    // Atualiza paginação para os dados filtrados
+    const totalPagesFiltered = Math.ceil(filteredData.length / rowsPerPage);
+    if (totalPagesFiltered !== totalPages) {
+      totalPages = totalPagesFiltered;
+      createPageButtons();
+    }
+    highlightCurrentPage();
+  }
+
   createPageButtons();
   displayRowsForPage(currentPage);
+
+  // Adiciona o event listener para o campo de busca
+  input.addEventListener("keyup", searchFunction);
 });
