@@ -17,6 +17,10 @@ def cadastro_funcionario():
 def sobre():
     return render_template("sobre.html", titulo="Sobre")
 
+@app.route("/recados")
+def recados():
+    return render_template("recados.html", titulo="recados")
+
 
 @app.route("/cadastro_morador")
 def cadastro_morador():
@@ -56,6 +60,8 @@ def resultados():
 @app.route("/units")
 def units():
     return render_template("units.html", titulo="units")
+
+
 
 
 @app.route("/login")

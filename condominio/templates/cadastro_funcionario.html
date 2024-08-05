@@ -32,21 +32,35 @@
                 </div>
                 <div class="form-group">
                     <label for="horario_trabalho">Horario de trabalho:</label>
-                    <select id="horario_trabalho" name="horario_trabalho" required>
+                    <select id="horario_trabalho" name="horario_trabalho" class="select_veiculo" required>
                         <option value=""></option>
-                            <option value="proprietario">Proprietario</option>
-                            <option value="inquilino">Inquilino</option>
+                            <option value="proprietario">Dia de 08:00 as 18:00</option>
+                            <option value="inquilino">Noite de 18:00 as 08:00</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="salario_funcionario">Salario:</label>
-                    <input type="text" id="salario_funcionario" name="salario_funcionario" required>
+                    <input type="number" id="salario_funcionario" name="salario_funcionario" class="select_veiculo" required>
                 </div>
+            </section>
+            <section>
+                <div class="form-group">
+                    <label for="transporte_funcionario">Transporte:</label>
+                    <input type="number" id="transporte_funcionario" name="transporte_funcionario"  class="select_veiculo" required>
+                </div>
+                <div class="form-group">
+                    <label for="refeicao_funcionario">Vale refeição:</label>
+                    <input type="number" id="refeicao_funcionario" name="refeicao_funcionario" class="select_veiculo" required>
+                </div>
+
+
+            </section>
+                
                         
                     
                     
-                </div>
-            </section>
+                
+            
             <button type="submit">Cadastrar Morador</button>
         </form>
     </main>
