@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paginação de Tabela</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/teste_paginacao.css') }}">
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Unidade</th>
+            <th>CPF</th>
+            <th>Morador</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="myTableBody">
+          <!-- Linhas da tabela serão inseridas aqui pelo JavaScript -->
+        </tbody>
+      </table>
+    <div class="pagination">
+      <button id="prev" class="btn_setas">Anterior</button>
+      <div id="page-numbers"></div>
+      <button id="next" class="btn_setas">Próximo</button>
+    </div>
+    <script src="../static/js/teste_paginacao.js"></script>
+  </body>
+  </html>
