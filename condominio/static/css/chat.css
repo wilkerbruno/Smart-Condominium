@@ -1,117 +1,100 @@
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    background-color: #f0f0f0;
-}
+
 
 #app {
-    width: 800px;
+    margin-top: 80px;
+    margin-left: 200px;
+    width: 1000px;
     height: 600px;
-    display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
     border-radius: 8px;
-    overflow: hidden;
-    margin-left: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#contacts-panel {
-    width: 30%;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
-    overflow-y: auto;
-}
-
-#contacts-panel h2 {
+h1 {
     text-align: center;
-    padding: 10px;
-    background-color: #f7f7f7;
-    margin: 0;
-    border-bottom: 1px solid #ddd;
 }
 
-#contacts-list {
+#residents {
+    margin-top: 280px;
+    margin-bottom: 20px;
+}
+
+#resident-list {
+    margin-top: 80px;
+    width: 200px;
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 240px;
-    margin-top: 40px;
+    
 }
 
-#contacts-list li {
+#resident-list li {
     padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #ddd;
-}
-
-#contacts-list li:hover {
-    background-color: #f0f0f0;
-}
-
-#chat-panel {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-}
-
-#chat-header {
-    padding: 10px;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-
-#message-list {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-}
-
-#message-list div {
-    margin-bottom: 10px;
-    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    max-width: 60%;
-    word-wrap: break-word;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.message-sent {
-    align-self: flex-end;
-    background-color: #dcf8c6;
-}
-
-.message-received {
-    align-self: flex-start;
-    background-color: #e9e9eb;
+#resident-list li:hover {
+    background-color: #eee;
 }
 
 #message-form {
+    margin-left: 220px;
+    right: 90%;
     display: flex;
-    padding: 10px;
-    border-top: 1px solid #ddd;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 #message-input {
-    flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #25d366;
+    padding: 10px;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #1ebc5a;
+    background-color: #0056b3;
+}
+
+#messages-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.message button {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message button:hover {
+    background-color: #d93636;
 }

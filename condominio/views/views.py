@@ -62,6 +62,10 @@ def units():
     return render_template("units.html", titulo="units")
 
 
+@app.route("/chat")
+def chat():
+    return render_template("chat.html", titulo="chat")
+
 
 
 @app.route("/login")
