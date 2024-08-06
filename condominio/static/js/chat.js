@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 messagesList.innerHTML = '';
-                data.forEach((message, index) => {
+                data.forEach((message) => {
                     const messageElement = document.createElement('div');
                     messageElement.className = 'message';
                     messageElement.innerHTML = `<strong>${message.sender}:</strong> `;
@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             messageInput.value = '';
             fileInput.value = '';
             loadMessages();
-        });
+        })
+        .catch(error => console.error('Erro ao enviar mensagem:', error));
     });
 
     // Carrega mensagens do morador padrão no início
