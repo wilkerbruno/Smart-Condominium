@@ -6,11 +6,12 @@
 
 
        <div id="app">
-        <h1>Bate-Papo do Condomínio</h1>
+        <h2 class="titulo_moradores">Moradores</h2>
+        <h1 >Chat do Condomínio</h1>
 
         <!-- Lista de Moradores -->
         <div id="residents">
-            <h2>Moradores</h2>
+            
             <ul id="resident-list">
                 <li data-id="1">Morador 1</li>
                 <li data-id="2">Morador 2</li>
@@ -19,15 +20,18 @@
             </ul>
         </div>
 
+        <div id="messages-list" class="lista-mensagens">
+            <!-- Mensagens serão exibidas aqui -->
+             sdfsd
+        </div>
+
         <!-- Formulário de Mensagens -->
         <form id="message-form" enctype="multipart/form-data">
             <textarea id="message-input" placeholder="Digite sua mensagem..."></textarea>
             <input type="file" id="file-input" accept="image/*, .pdf, .doc, .docx" />
             <button type="submit">Enviar Mensagem</button>
         </form>
-        <div id="messages-list">
-            <!-- Mensagens serão exibidas aqui -->
-        </div>
+        
     </div>
 
 
