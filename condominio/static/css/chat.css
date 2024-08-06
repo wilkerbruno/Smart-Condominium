@@ -46,6 +46,12 @@ h1 {
     background-color: #eee;
 }
 
+#resident-list li.selected {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+}
+
 #message-form {
     margin-left: 220px;
     right: 90%;
@@ -115,3 +121,6 @@ button:hover {
 .message button:hover {
     background-color: #d93636;
 }
+
+
+

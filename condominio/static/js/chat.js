@@ -22,11 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         messageElement.innerHTML += `<p>${message.text}</p>`;
                     }
                     if (message.file_url) {
-                        messageElement.innerHTML += `<p><a href="${message.file_url}" target="_blank">Ver Arquivo</a></p>`;
+                        const fileName = message.file_url.split('/').pop();
+                        messageElement.innerHTML += `<p><a href="${message.file_url}" target="_blank">Ver Arquivo (${fileName})</a></p>`;
                     }
                     messagesList.appendChild(messageElement);
                 });
             });
+    }
+
+    // Função para atualizar o morador selecionado
+    function updateSelectedResident() {
+        const allResidents = residentList.querySelectorAll('li');
+        allResidents.forEach(resident => {
+            if (resident.getAttribute('data-id') === currentResidentId.toString()) {
+                resident.classList.add('selected');
+            } else {
+                resident.classList.remove('selected');
+            }
+        });
     }
 
     // Seleção de morador
@@ -34,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target.tagName === 'LI') {
             currentResidentId = event.target.getAttribute('data-id');
             loadMessages();
+            updateSelectedResident();
         }
     });
 
@@ -64,5 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Carrega mensagens do morador padrão no início
     loadMessages();
+    updateSelectedResident(); // Atualiza a seleção inicial
 });

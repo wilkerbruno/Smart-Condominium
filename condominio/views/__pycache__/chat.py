@@ -1,3 +1,5 @@
+# server.py
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
@@ -45,4 +47,5 @@ def post_message(resident_id):
         messages[resident_id].append({'text': text, 'sender': sender})
         return jsonify({'success': True})
 
-
+if __name__ == '__main__':
+    app.run(port=3000, debug=True)
