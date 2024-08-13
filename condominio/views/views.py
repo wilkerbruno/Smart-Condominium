@@ -27,6 +27,8 @@ def cadastro_morador():
     return render_template("cadastro_morador.html", titulo="Cadastro de Morador")
 
 
+
+
 @app.route("/cadastro_unit")
 def cadastro_unit():
     return render_template("cadastro_unit.html", titulo="cadastro de Unidades")
