@@ -242,7 +242,7 @@ body {
 
 .user-bubble {
     display: inline-block;
-    background-color: #3CB371;
+    background-color: #333;
     padding: 0.5em 1em;
     border-radius: 1em;
     margin-left: 0.5em;
@@ -284,6 +284,9 @@ body {
   margin-bottom: 30px;
   cursor: pointer;
   }
+  
+
+  
   
   
   
@@ -331,6 +334,7 @@ body {
   height: 300px;
   position: relative;
   overflow-y:auto;
+  background-color: 3333;
   
   }
 
