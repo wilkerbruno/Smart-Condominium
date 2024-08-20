@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const messagesList = document.getElementById('messages-list');
     const messageForm = document.getElementById('message-form');
     const messageInput = document.getElementById('message-input');
-    const fileInput = document.getElementById('file-input');
+    const fileInput = document.getElementById('file-input'); 
     const residentList = document.getElementById('resident-list');
     let currentResidentId = 1; // Morador padrão selecionado
 
