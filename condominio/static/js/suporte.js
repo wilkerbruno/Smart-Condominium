@@ -27,7 +27,7 @@ const supportResponses = [
 
 const addMessage = (message, isUser) => {
   const messageHTML = `
-    <div class="message">
+    <div class="messages">
       <p><span class="${isUser ? 'user-message' : 'support-message'}">${isUser ? 'Você' : 'Suporte'}:</span></p>
     </div>
   `;

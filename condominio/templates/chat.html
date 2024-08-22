@@ -1,11 +1,40 @@
+<!-- HTML -->
+
 {% extends "template.html" %}
 
 {% block conteudo_body %}
 
 
+       <div id="app">
+        <h2 class="titulo_moradores">Moradores</h2>
+        <h1 class="h1_chat" >Chat do Condomínio</h1>
 
-<!-- essa será a pagina que ficará o chat para postar fotos ou mensagens da portaria ou do sindico para os moradores-->
- 
+        <!-- Lista de Moradores -->
+        <div id="residents">
+            
+            <ul id="resident-list">
+                <li data-id="1">Morador 1</li>
+                <li data-id="2">Morador 2</li>
+                <li data-id="3">Morador 3</li>
+                <li data-id="4">Morador 4</li>
+            </ul>
+        </div>
+
+        <div id="messages-list" class="lista-mensagens">
+            <!-- Mensagens serão exibidas aqui -->
+            
+
+             
+        </div>
+
+        <!-- Formulário de Mensagens -->
+        <form id="message-form" enctype="multipart/form-data">
+            <textarea id="message-input" placeholder="Digite sua mensagem..."></textarea>
+            <input type="file" id="file-input" accept="image/*, .pdf, .doc, .docx" />
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        
+    </div>
 
 
 

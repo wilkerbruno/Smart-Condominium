@@ -1,33 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paginação de Tabela</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/teste_paginacao.css') }}">
-</head>
-<body>
-    <table id="myTable">
-        <thead>
-          <tr>
-            <th>Unidade</th>
-            <th>CPF</th>
-            <th>Morador</th>
-            <th>Telefone</th>
-            <th>Celular</th>
-            <th>Email</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="myTableBody">
-          <!-- Linhas da tabela serão inseridas aqui pelo JavaScript -->
-        </tbody>
-      </table>
-    <div class="pagination">
-      <button id="prev" class="btn_setas">Anterior</button>
-      <div id="page-numbers"></div>
-      <button id="next" class="btn_setas">Próximo</button>
+{% extends "template.html" %}
+
+{% block conteudo_body %}
+
+
+
+<div class="container_sobre">
+    <h2 class="h1_sobre">Sobre o Smart Condominium</h2>
+    <p>O Smart Condominium foi desenvolvido para simplificar a administração de condomínios de todos os tamanhos. Ele permite um controle completo sobre todos os aspectos financeiros, agendamentos, consumo de utilidades e gestão de funcionários. Desde o controle de inadimplências até o agendamento de espaços comuns pelos moradores, o sistema oferece uma solução integrada para síndicos e administradores.</p>
+
+    <h2 class="h1_sobre">Principais Funcionalidades</h2>
+    <div class="features">
+        <div class="feature-box">
+          <a  href="{{ url_for('index') }}">  <img src="https://img.icons8.com/ios-filled/50/000000/accounting.png" alt="Finanças">
+            <h3>Controle Financeiro</h3>
+            <p>Gerencie todas as receitas e despesas, incluindo salários de funcionários, custos de manutenção, e controle completo da inadimplência.</p>
+            </a>
+        </div>
+        <div class="feature-box">
+            <a  href="{{ url_for('index') }}">
+            <img src="https://img.icons8.com/ios-filled/50/000000/statistics.png" alt="Gráficos">
+            <h3>Gráficos Detalhados</h3>
+            <p>Acompanhe os custos e lucros do condomínio com gráficos visuais que facilitam a compreensão das finanças.</p>
+                </a>
+        </div>
+        <div class="feature-box">
+            <a  href="{{ url_for('index') }}">
+            <img src="https://img.icons8.com/ios-filled/50/000000/water.png" alt="Consumo de Água">
+            <h3>Consumo de Água e Gás</h3>
+            <p>Monitore o consumo de água e gás para um controle eficiente dos recursos do condomínio.</p>
+        </a>
+        </div>
+        <div class="feature-box">
+            <a  href="{{ url_for('index') }}">
+            <img src="https://img.icons8.com/ios-filled/50/000000/calendar.png" alt="Agendamentos">
+            <h3>Agendamento de Espaços</h3>
+            <p>Permita que os moradores agendem o espaço gourmet, mesas, cadeiras e outros recursos do condomínio diretamente pelo sistema.</p>
+                </a>
+        </div>
+        <div class="feature-box">
+            <a  href="{{ url_for('index') }}">
+            <img src="https://img.icons8.com/ios-filled/50/000000/work.png" alt="Gestão de Funcionários">
+            <h3>Gestão de Funcionários</h3>
+            <p>Controle os horários, turnos e salários dos funcionários de forma centralizada e eficiente.</p>
+        </a>
+        </div>
+        <div class="feature-box">
+            <a  href="{{ url_for('index') }}">
+            <img src="https://img.icons8.com/ios-filled/50/000000/alarm.png" alt="Notificações">
+            <h3>Envio de Multas</h3>
+            <p>O síndico pode enviar notificações e multas diretamente aos moradores em caso de infrações das regras do condomínio.</p>
+                </a>
+        </div>
     </div>
-    <script src="../static/js/teste_paginacao.js"></script>
-  </body>
-  </html>
+</div>
+
+   {% endblock %}
