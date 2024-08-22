@@ -1,4 +1,113 @@
 /* styles.css */
+<<<<<<< HEAD
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+#app {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 20%;
+}
+
+#contacts-panel {
+    width: 30%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+#contacts-panel h2 {
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    margin-top: 40px;
+}
+
+#contacts-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#contacts-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#chat-panel {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+#chat-header {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#message-list {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#message-list div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.message-sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.message-received {
+    align-self: flex-start;
+    background-color: #e9e9eb;
+}
+
+#message-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #25d366;
+=======
 
 
 #app {
@@ -76,10 +185,18 @@
 button {
     padding: 10px;
     background-color: #007bff;
+>>>>>>> develop
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+<<<<<<< HEAD
+}
+
+button:hover {
+    background-color: #1ebc5a;
+}
+=======
     margin-top: 20px;
     transition: background-color 0.3s ease;
 }
@@ -124,3 +241,4 @@ button:hover {
 
 
 
+>>>>>>> develop
