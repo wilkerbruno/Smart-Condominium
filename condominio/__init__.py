@@ -18,3 +18,4 @@ from .views.condominio_views import *
 from .views.veiculo_views import *
 from .views.morador_views import *
 from .models.veiculo_model import Veiculo
+from .models.morador_model import Morador

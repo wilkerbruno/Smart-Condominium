@@ -6,10 +6,10 @@ class Morador(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nome = db.Column(db.String(50), nullable=False)
     sobrenome = db.Column(db.String(50), nullable=False)
-    cpf = db.Column(db.Integer, nullable=False)
-    celular = db.Column(db.Integer, nullable=False)
-    telefone = db.Column(db.Integer)
-    email = db.Column(db.String(50), nullable=False)
+    cpf = db.Column(db.Integer, nullable=False, unique=True)
+    celular = db.Column(db.Integer, nullable=False, unique=True)
+    telefone = db.Column(db.Integer, nullable=False, unique=True)
+    email = db.Column(db.String(50), nullable=False, unique=True)
 
     def __init__(self, nome, sobrenome, cpf, celular, telefone, email):
         self.nome = nome

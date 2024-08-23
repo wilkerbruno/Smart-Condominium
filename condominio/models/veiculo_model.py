@@ -8,7 +8,7 @@ class Veiculo(db.Model):
     nome = db.Column(db.String(20), nullable=False)
     ano = db.Column(db.Integer, nullable=False)
     modelo = db.Column(db.String(20), nullable=False)
-    placa = db.Column(db.String(20), nullable=False)
+    placa = db.Column(db.String(20), nullable=False, unique=True)
     cor = db.Column(db.String(20), nullable=False)
 
     def __init__(self, tipo, nome, ano, modelo, placa, cor):
